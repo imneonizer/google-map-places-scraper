@@ -25,6 +25,7 @@ async def find_places(
         timeout=timeout,
         max_results=max_results,
     )
+    scraper.close()
 
     return {
         "message": "success",
@@ -54,6 +55,7 @@ async def find_places(data: FindPlacesRequestModel):
         timeout=data.timeout,
         max_results=data.max_results,
     )
+    scraper.close()
 
     return {
         "message": "success",
